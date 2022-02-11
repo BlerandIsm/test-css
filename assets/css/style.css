@@ -34,68 +34,121 @@ span.favorable{
 
 
 
-.currency {
+.heading-container{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-   }
-.currency select {
-    background: transparent;
-       background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-       background-repeat: no-repeat, repeat;
-       background-position: right .2em top 50%, 0 0;
-       background-size: .50em auto, 100%;
-    border: 0;
-    padding-right: 20px;
-    font-size: 22px;
-       -moz-appearance: none;
-       -webkit-appearance: none;
-       appearance: none;
-   }
-.currency input {
-    border: 0;
-    background: transparent;
-    font-size: 22px;
-    text-align: right;
-   }
-.middle {
-    color: #f59300;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+h1{
+    color: #10283d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+.main-container{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-   }
-.middle button {
-    background-color: #fff;
-    border: 2px solid #ecf0f1;
-    border-radius: 50%;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.to-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.amount-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+#from, #to{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: 80px;
+    text-align: left;
+}
+
+#drop-down-1, #drop-down-2{
+    outline: none;
+    border: 1px transparent;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    justify-self: center;
+    padding: 5px;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.number-input{
+    width: 220px;
+    margin: 0px 10px 0px 0px;
+    background-color: #1f517c;
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    outline: none;
+    border: 1px transparent;
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.number-input::placeholder{
+    color: rgb(207, 212, 218);
+    font-family: 'Montserrat', sans-serif;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.btn-container{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    justify-self: center;
+    margin: 20px 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#btn{
+    padding: 15px 15px;
+    background-color: #173753;
+    color: whitesmoke;
+    border: 1px transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 240px;
+}
+#btn:hover{
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
     cursor: pointer;
-    color: #f59300;
-    font-size: 18px;
+}
+#btn:disabled{
+    box-shadow: none;
+    cursor: default;
+    background-color: #354350;
+    color: rgb(156, 156, 156);
+    transition: all 0.3s;
+}
+#btn:enabled{
+    transition: all 0.3s;
+}
+#btn:focus{
+    outline: none;
+}
+#result{
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
     justify-content: center;
-    height: 30px;
-    width: 30px;
-    transform: rotate(90deg);
-   }
-   .middle button:active {
-    transform: rotate(90deg) scale(0.9);
-   }
-   .middle .rate {
-    background-color: #fff;
-    border: 2px solid #ecf0f1;
-    border-radius: 50px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    padding: 0 10px;
-    margin: 30px 15px 30px 25px;
-   }
-   select:focus, input:focus, button:focus {
-    outline: 0;
-   }
-   .section-title {
-       color: black;
-   }
+    color: #173753;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-top: 50px;
+}
