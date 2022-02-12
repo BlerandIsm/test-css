@@ -1,5 +1,11 @@
-.search-column{
-    background: linear-gradient( to left,  #00d2ff, #928bad);
+.search-column , .services, footer{
+    background: linear-gradient( to left, #fbeec1, #bc986a);
+}
+.hero {
+    background-image: url("https://images.unsplash.com/photo-1476984251899-8d7fdfc5c92c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+}
+.image{
+    opacity: 0.7;
 }
 
 .list-group-item{
@@ -30,9 +36,9 @@ span.favorable{
     height: 500px;
     width: 100%;
 }
-
-
-
+h2:hover {
+    background-color:#daad86;
+}
 
 .heading-container{
     display: flex;
@@ -76,7 +82,7 @@ h1{
 
 #drop-down-1, #drop-down-2{
     outline: none;
-    border: 1px transparent;
+    border: 1px;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     justify-self: center;

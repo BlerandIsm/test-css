@@ -1,166 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <title>Travel Buddy</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Travel Buddy</title>
 </head>
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <div class="navbar-item">
-                <img src="assets/images/TB Logo muted colors-sm icon.png" width="80">
-                Travel Buddy
-            </div>
+  <!--nav bar-->
+  <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <img src="assets/images/TB Logo muted colors-sm icon.png" style="max-height: 70px;" class="py-2 px-2" > <h1>Travel Buddy</h1>
+      </a>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#WEATHER">Weather</a>
+        <a class="navbar-item" href="#CURRENCY">Currency</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section ml-0 hero">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-11-tablet is-10-desktop has-text-left">
+          <img src="https://images.unsplash.com/photo-1476984251899-8d7fdfc5c92c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="image" class="px-6 image" >
         </div>
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <a href="#WEATHER">Weather</a>
-                
+        <div class="column is-1-tablet is-2-desktop">
+          <div class="message">
+            <div class="message-header">
+              <p> Welcome to <b>Travel Buddy</b></p>
             </div>
-                
-            <div class="navbar-item">
-                <a href="CURRENCY">Currency</a>
+            <div class="message-body">
+              <p>Welcome! We will be your travel buddy along this adventure.
+                <br>
+                With us two of your main conerns will be solved in just one click. What is my money worth in USA and do I need an umbrella or sunscreen for today?
+
+              </p>
+              </p>
             </div>
-        </div>
-    </nav>
-
-
-
-    <section class="hero is-success is-halfheight">
-        <div class="hero-body">
-          <div class="">
-            <p class="title">
-                <img src="assets/images/miami.jpg">
-            </p>
-            <p class="subtitle">
-                <p>Welcome! We are your travel buddy. Together we will go on this adventure. We bring weather and currency, you bring the fun!</p>
-            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-
+  <section class="section services">
+    <div class="container">
       <div class="columns">
-        <div class="column">
-          <p class="bd-notification is-info">Our Services</p>
-          <div class="columns is-mobile">
-            <div class="column">
-              <p class="bd-notification is-info">Weather</p>
-                    <div class="search-column">
-                        <form class = "border p-2 " id = "city-search-form">
-                            <h4>Search for a City</h2>
-                            <input id="city" type = "text" autofocus = "true" class = "form-input card-panel blue lighten-4"/>
-                            <button class = "" type = "submit" name="action">Search</button>
-                        </form>
-                        <div class = "past-primary border" id = "past-search-buttons"></div>
-                    </div>
-                    <div>
-                        <div class = " selected-city" id = "current-forecast">
-                            <div>
-                                <h2 id="searched-city"></h2>
-                                <div id = "current-weather-container" class = "list-group"></div>
-                            </div>  
-                        </div>
-                        <div  id = "five-day-forecast">
-                                <h2  id = "forecast"></h2>
-                                <div class = "d-flex" id = "fiveday-container"></div>
-                        </div>  
-                    </div>
+        <div class="column is-12-tablet is-8-desktop ">
+          <p class="bd-notification" id="WEATHER"><h2>Weather</h2></p>
+          <div class = "row">
+            <div class="col-12 col-md-3 p-2 search-column">
+              <form class = "border p-2" id = "city-search-form">
+                <h2>City Name</h2>
+                <input id="city" type = "text" autofocus = "true" class = "form-input"/>
+                <button class = "btn btn-info" type = "submit">Search</button>
+              </form>
+            <div class = "past-primary border" id = "past-search-buttons"></div>
+          </div>
+          <div class="col-12 col-md-9">
+            <div class = "row border selected-city" id = "current-forecast">
+              <div class = "col-12">
+                <h2 id="searched-city"></h2>
+                <div id = "current-weather-container" class = "list-group"></div>
+              </div>  
             </div>
-            <div class="column">
-              <p class="bd-notification is-info">Currency</p>
-
-              <section id="#CURRENCY">
-                <div class="flex-row">
-                      <h2 class="section-title primary-border">
-                        CURRENCY
-                      </h2>
-                      <div class="container">
-                        <div class="currency">
-                        <select id="from_currency">
-                       <option value="USD" selected>USD</option>
-                       
-                        </select>
-                        <input type="number" id="from_ammount" placeholder="0" value=1 />
-                        </div>
-                        <div class="middle">
-                        <button id="exchange">
-                        <i class="fas fa-exchange-alt"></i>
-                        </button>
-                        <div class="rate" id="rate"></div>
-                        </div>
-                        <div class="currency">
-                        <select id="to_currency"><option value="AED">AED</option>
-                        <option value="ARS">ARS</option>
-                        <option value="AUD">AUD</option>
-                        <option value="BGN">BGN</option>
-                        <option value="BRL">BRL</option>
-                        <option value="BSD">BSD</option>
-                        <option value="CAD">CAD</option>
-                        <option value="CHF">CHF</option>
-                        <option value="CLP">CLP</option>
-                        <option value="CNY">CNY</option>
-                        <option value="COP">COP</option>
-                        <option value="CZK">CZK</option>
-                        <option value="DKK">DKK</option>
-                        <option value="DOP">DOP</option>
-                        <option value="EGP">EGP</option>
-                        <option value="EUR"  selected >EUR</option>
-                        <option value="FJD">FJD</option>
-                        <option value="GBP">GBP</option>
-                        <option value="GTQ">GTQ</option>
-                        <option value="HKD">HKD</option>
-                        <option value="HRK">HRK</option>
-                        <option value="HUF">HUF</option>
-                        <option value="IDR">IDR</option>
-                        <option value="ILS">ILS</option>
-                        <option value="INR">INR</option>
-                        <option value="ISK">ISK</option>
-                        <option value="JPY">JPY</option>
-                        <option value="KRW">KRW</option>
-                        <option value="KZT">KZT</option>
-                        <option value="MXN">MXN</option>
-                        <option value="MYR">MYR</option>
-                        <option value="NOK">NOK</option>
-                        <option value="NZD">NZD</option>
-                        <option value="PAB">PAB</option>
-                        <option value="PEN">PEN</option>
-                        <option value="PHP">PHP</option>
-                        <option value="PKR">PKR</option>
-                        <option value="PLN">PLN</option>
-                        <option value="PYG">PYG</option>
-                        <option value="RON">RON</option>
-                        <option value="RUB">RUB</option>
-                        <option value="SAR">SAR</option>
-                        <option value="SEK">SEK</option>
-                        <option value="SGD">SGD</option>
-                        <option value="THB">THB</option>
-                        <option value="TRY">TRY</option>
-                        <option value="TWD">TWD</option>
-                        <option value="UAH">UAH</option>
-                        <option value="USD">USD</option>
-                        <option value="UYU">UYU</option>
-                        <option value="VND">VND</option>
-                        <option value="ZAR">ZAR</option>
-                        </select>
-                        <input type="number" id="to_ammount" placeholder="0" />
-                        </div>
-                       </div>
-                         
-                       </div>
-            </section>
-            </div>
+            <div class = "row border" id = "five-day-forecast">
+              <h2 class= "col-12" id = "forecast"></h2>
+              <div class = "d-flex" id = "fiveday-container"></div>
+            </div>  
           </div>
         </div>
+          </div>
+        <div class="column is-12-tablet is-4-desktop">
+          <section id="#CURRENCY">
+            <div class="flex-row">
+              <h2 class="section-title primary-border currency">
+                Currency
+              </h2>
+              <div class="container">
+                <div class="currency">
+                  <select id="from_currency">
+                    <option value="USD" selected>USD</option> 
+                  </select>
+                  <input type="number" id="from_ammount" placeholder="0" value=1 />
+                </div>
+                <div class="middle">
+                  <button id="exchange">
+                    <i class="fas fa-exchange-alt"></i>
+                  </button>
+                  <div class="rate" id="rate"></div>
+                </div>
+                <div class="currency">
+                  <select id="to_currency">
+                    <option value="AED">AED</option>
+                    <option value="ARS">ARS</option>
+                    <option value="AUD">AUD</option>
+                    <option value="BGN">BGN</option>
+                    <option value="BRL">BRL</option>
+                    <option value="BSD">BSD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CHF">CHF</option>
+                    <option value="CLP">CLP</option>
+                    <option value="CNY">CNY</option>
+                    <option value="COP">COP</option>
+                    <option value="CZK">CZK</option>
+                    <option value="DKK">DKK</option>
+                    <option value="DOP">DOP</option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR"  selected >EUR</option>
+                    <option value="FJD">FJD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="HKD">HKD</option>
+                    <option value="HRK">HRK</option>
+                    <option value="HUF">HUF</option>
+                    <option value="IDR">IDR</option>
+                    <option value="ILS">ILS</option>
+                    <option value="INR">INR</option>
+                    <option value="ISK">ISK</option>
+                    <option value="JPY">JPY</option>
+                    <option value="KRW">KRW</option>
+                    <option value="KZT">KZT</option>
+                    <option value="MXN">MXN</option>
+                    <option value="MYR">MYR</option>
+                    <option value="NOK">NOK</option>
+                    <option value="NZD">NZD</option>
+                    <option value="PAB">PAB</option>
+                    <option value="PEN">PEN</option>
+                    <option value="PHP">PHP</option>
+                    <option value="PKR">PKR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="PYG">PYG</option>
+                    <option value="RON">RON</option>
+                    <option value="RUB">RUB</option>
+                    <option value="SAR">SAR</option>
+                    <option value="SEK">SEK</option>
+                    <option value="SGD">SGD</option>
+                    <option value="THB">THB</option>
+                    <option value="TRY">TRY</option>
+                    <option value="TWD">TWD</option>
+                    <option value="UAH">UAH</option>
+                    <option value="USD">USD</option>
+                    <option value="UYU">UYU</option>
+                    <option value="VND">VND</option>
+                    <option value="ZAR">ZAR</option>
+                  </select>
+                  <input type="number" id="to_ammount" placeholder="0" />
+                </div>
+              </div>
+                         
+            </div>
+          </section>
+        </div>
+      </div>  
+    </div>
+  </section>
 
+  <!--footer-->
+  <footer class="footer">
+    <div class="conten has-text-centered">
+      <p>&copy; 2022 Travel Buddy, Inc.</p>
+    </div>
 
-
-
+  </footer>
 
 
 
@@ -168,7 +182,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets\js\function.js"></script>
+    <script src="assets/js/function.js"></script>
+    <script src="assets/js/index.js"></script> 
     
 </body>
 </html>
