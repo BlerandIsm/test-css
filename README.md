@@ -73,11 +73,8 @@
 ## Usage
 * Tourists all over the world.
 - ![Website](assets/images/front page.jpg)
-...
 - ![Services](assets/images/services.jpg)
-...
 - ![Logo](assets/images/TB Logo muted colors-sm icon.png)
-...
 ​
 ​
 ## Credits
