@@ -72,7 +72,7 @@
 ​
 ## Usage
 * Tourists all over the world.
-- ![Website](assets/images/front page.jpg)
+- ![Website](assets/images/front_page.jpg)
 
 - ![Services](assets/images/services.jpg)
 
