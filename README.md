@@ -73,9 +73,10 @@
 ## Usage
 * Tourists all over the world.
 - ![Website](assets/images/front page.jpg)
+
 - ![Services](assets/images/services.jpg)
-- ![Logo](assets/images/TB Logo muted colors-sm icon.png)
-​
+
+- ![Logo](assets/images/logo.jpg)
 ​
 ## Credits
 * This is a group project assignment see [UM's Coding Bootcamp](https://bootcamp.miami.edu/coding/)
